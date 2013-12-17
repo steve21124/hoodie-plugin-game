@@ -1,4 +1,4 @@
-# Hoodie Social Plugin
+# Hoodie Game Plugin
 
 This plugin adds basic game mechanics to a Hoodie application.
 
