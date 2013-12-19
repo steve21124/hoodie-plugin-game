@@ -85,7 +85,7 @@ Listen for game event
 
 ## Setup
 
-Install the plugin, start your Hoodie app, then edit ‘hoodie-plugin-game/config/game’ to add ‘game_achievements’ and ‘game_levels’ entires following the default structure established.  Once entered, you should be all set.
+Install the plugin, start your Hoodie app, then add game levels and achievements in Pocket.  Once entered, you should be all set.
 
 Be sure to open an issue should you have any problems.  Pull requests are welcome!
 

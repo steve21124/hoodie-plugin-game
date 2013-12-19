@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="/styles/app.css">
+      
+      <style>
+        legend {
+            border-bottom: none;
+            margin-bottom: 0px;
+        }
+        
+        #achCancelBtn, #levelCancelBtn,#achievementNameGroup, #achUpdateBtn, #levelUpdateBtn, #levelDelBtn  {
+            display:none;
+        }
+      </style>
+  </head>
+  <body>
+
+    <div>
+      <div class="module content centered">
+        <h2 class="top">Game Config</h2>
+
+        <div class="module-content">
+          <div>
+            <div class="module">
+              <legend>Levels</legend>
+              <form id="levelsForm" class="form-horizontal" action="">
+                <section>
+                <div class="control-group">
+                  <label>Level</label>
+                  <div class="controls">
+                    <select id="levelSelect" name="levelSelect">
+                        <!-- options go here -->
+                        <option value="">Loading...</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label>Level Name</label>
+                  <div class="controls">
+                    <input id="levelName" name="levelName" class="levelInput gameSettingsInput" disabled="disabled" placeholder="Enter level name" type="text">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label>Points Required</label>
+                  <div class="controls">
+                    <input id="levelPoints" name="levelPoints" class="levelInput gameSettingsInput" disabled="disabled" placeholder="Enter points required"type="text">
+                  </div>
+                </div>
+
+                <label></label>
+                <div class="controls">
+                  <button id="levelEditBtn" class="btn" type="">Edit</button>
+                  <button id="levelCancelBtn" class="btn" type="">Cancel</button>
+                  <button id="levelUpdateBtn" class="btn gameSettingsBtn update" type="">Save</button>
+                  <button id="levelDelBtn" class="btn" type="">Delete</button>
+                  <span class="submitMessage"></span>
+                </div>
+                </section>
+              </form>
+            </div>
+            
+            
+            
+            
+            
+            <div class="module">
+              <legend>Achievements</legend>
+              <form id="achievementsForm" class="form-horizontal" action="">
+                <section>
+                
+                <div id="achievementSelectGroup" class="control-group">
+                  <label>Achievement</label>
+                  <div class="controls">
+                    <select id="achievementSelect" name="achievementSelect">
+                        <!-- options go here -->
+                        <option value="">Loading...</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div id="achievementNameGroup" class="control-group">
+                  <label>Achievement</label>
+                  <div class="controls">
+                    <input id="achievementName" name="achievementName" class="gameSettingsInput" placeholder="Enter achievement name" type="text">
+                  </div>
+                </div>
+                
+                <div class="control-group">
+                  <label>Action Units Required</label>
+                  <div class="controls">
+                    <input id="achievementActionQty" name="achievementActionQty" class="achInput gameSettingsInput" placeholder="Enter action units required" type="text">
+                  </div>
+                </div>
+
+                <div class="control-group">
+                  <label>Badge Url</label>
+                  <div class="controls">
+                    <input id="achievementBadgeUrl" name="achievementBadgeUrl" class="achInput gameSettingsInput" placeholder="Enter badge url" type="text">
+                  </div>
+                </div>
+
+                <label></label>
+                <div class="controls">
+                  <button id="achEditBtn" class="btn" type="">Edit</button>
+                  <button id="achCancelBtn" class="btn" type="">Cancel</button>
+                  <button id="achUpdateBtn" class="btn gameSettingsBtn update" type="">Save</button>
+                  <button id="achDelBtn" class="btn" type="">Delete</button>
+                  <span class="submitMessage"></span>
+                </div>
+                </section>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="jquery-2.0.3.min.js"></script>
+    <script src="underscore-min.js"></script>
+    <script src="couchr.js"></script>
+    <script src="gameconfig.js"></script>
+
+  </body>
+</html>

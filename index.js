@@ -22,19 +22,10 @@ module.exports = function (hoodie, cb) {
     //check for the achievements doc and add it if necessary
     gameDb.find('config', 'game', function(err, doc){
         if (err && err.error == 'not_found') {
-            //setup some defualts
+            //setup some defaults
             var defaults = {
                 id:"game",
-                game_achievements: {
-                    "ID1": {
-                        "achievement_name":"",
-                        "badge_src":"",
-                        "achievement_description":"",
-                        "amount_needed":0,
-                        "time_period":0,
-                        "status":"inactive"
-                    }
-                },
+                game_achievements: {},
                 game_levels: {
                     "0": {
                         "level_name":"Level 0",
@@ -46,6 +37,8 @@ module.exports = function (hoodie, cb) {
             //add the doc
             gameDb.add('config', defaults, function(err) { if (err) console.log(err); });
         }
+        
+        //TODO: force an level 0 (zero) if it does not exist (whic should only happen if the admin deleted it directly)
     });
     
     //check for the leaderboard design doc and add it if necessary
