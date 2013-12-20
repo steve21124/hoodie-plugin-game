@@ -1,3 +1,8 @@
+/*
+ * Some portions adapted from https://github.com/hoodiehq/hoodie-plugin-appconfig
+ * Other remaining work Copyright 2013 Xiatron LLC
+ */
+ 
 $(function () {
     //set some vars
     var getConfig = _.partial(couchr.get, '/_api/hoodie-plugin-game/'+encodeURIComponent('config/game'));
