@@ -2,9 +2,7 @@
 
 This plugin adds basic game mechanics to a Hoodie application.
 
-The development of this plugin is sponsored by Appback.com - the future home of Hoodie Hosting!
-
-Please note:  This plugin is under major development and we are actively experimenting to identify the best ways of integrating with Hoodie.  Use at your own risk.
+The development of this plugin is sponsored by Appback.com - the first and only Hoodie Host!  Go to [https://appback.com](https://appback.com) to get started for free today!
 
 ## Installation
 
@@ -91,6 +89,7 @@ Be sure to open an issue should you have any problems.  Pull requests are welcom
 
 Enjoy!
     
+Please note:  This plugin is under major development and we are actively experimenting to identify the best ways of integrating with Hoodie.  Use at your own risk.
 
 
 ## Copyright

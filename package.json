@@ -1,6 +1,6 @@
 {
     "name": "hoodie-plugin-game",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "A plugin to add game mechanics to Hoodie",
     "author": {
         "name": "Dale Shaw",
