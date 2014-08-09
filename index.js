@@ -27,10 +27,22 @@ module.exports = function (hoodie, cb) {
                 id:"game",
                 game_achievements: {},
                 game_levels: {
-                    "0": {
-                        "level_name":"Level 0",
-                        "points_needed":0
-                    }
+					"0": {"level_name":"Reader","points_needed":0},
+					"1": {"level_name":"Writer","points_needed":1000},
+					"2": {"level_name":"Author","points_needed":2000},
+					"3": {"level_name":"Professional","points_needed":3000},
+					"4": {"level_name":"Master","points_needed":5000},
+					"5":  {"level_name":"Guru 1 Dan","points_needed":10000},
+					"6":  {"level_name":"Guru 2 Dan","points_needed":20000},
+					"7":  {"level_name":"Guru 3 Dan","points_needed":30000},
+					"8":  {"level_name":"Guru 4 Dan","points_needed":40000},
+					"9":  {"level_name":"Guru 5 Dan","points_needed":50000},
+					"10": {"level_name":"Guru 6 Dan","points_needed":60000},
+					"11": {"level_name":"Guru 7 Dan","points_needed":70000},
+					"12": {"level_name":"Guru 8 Dan","points_needed":80000},
+					"13": {"level_name":"Guru 9 Dan","points_needed":90000},
+					"14": {"level_name":"Guru 10 Dan","points_needed":100000},
+					"15": {"level_name":"God","points_needed":1000000}
                 }
             };
             
