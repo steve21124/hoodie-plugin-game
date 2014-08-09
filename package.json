@@ -32,7 +32,7 @@
         "moment":"~2.4.0"
     },
     "peerDependencies": {
-        "hoodie-server": "steve21124/hoodie-server"
+        "hoodie-server": "^1.0.0"
     },
     "main": "index.js",
     "readmeFilename": "README.md"
