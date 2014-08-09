@@ -7,7 +7,7 @@ Hoodie.extend(function(hoodie) {
     
     //Get game achievements
     hoodie.game.getAchievements = function() {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = _getGameData('game_achievements');
         promise.done(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -16,7 +16,7 @@ Hoodie.extend(function(hoodie) {
     
     //Get single game achievement
     hoodie.game.getAchievement = function(achId) {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = _getGameData('game_achievements', achId);
         promise.done(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -25,7 +25,7 @@ Hoodie.extend(function(hoodie) {
     
     //Get game levels
     hoodie.game.getLevels = function() {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = _getGameData('game_levels');
         promise.done(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -34,7 +34,7 @@ Hoodie.extend(function(hoodie) {
     
     //Get single game level
     hoodie.game.getLevel = function(levelId) {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = _getGameData('game_levels', levelId);
         promise.done(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -43,7 +43,7 @@ Hoodie.extend(function(hoodie) {
     
     //Get game leaderboard
     hoodie.game.getLeaderboard = function() {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = hoodie.request('GET', '/hoodie-plugin-game/_design/leaderboard/_view/points?descending=true');
         promise.done(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -52,7 +52,7 @@ Hoodie.extend(function(hoodie) {
     
     //Get player info
     hoodie.game.getPlayerCard = function(ownerHash) {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = hoodie.request('GET', '/hoodie-plugin-game/'+encodeURIComponent('card/'+ownerHash));
         promise.done(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -63,7 +63,7 @@ Hoodie.extend(function(hoodie) {
     hoodie.game.addPoints = function(points) {
         var attrs = { card: {points:points} };
         attrs['card']['ownerHash'] = hoodie.account.ownerHash;
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = hoodie.task.start('addpoints', attrs);
         promise.then(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -74,7 +74,7 @@ Hoodie.extend(function(hoodie) {
     hoodie.game.addAction = function(acheivement, units) {
         var attrs = { card: {achievement:acheivement, units:units} };
         attrs['card']['ownerHash'] = hoodie.account.ownerHash;
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = hoodie.task.start('addaction', attrs);
         promise.then(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -85,7 +85,7 @@ Hoodie.extend(function(hoodie) {
     hoodie.game.updateCard = function(values) {
         var attrs = { card: values };
         attrs['card']['ownerHash'] = hoodie.account.ownerHash;
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = hoodie.task.start('updcard', attrs);
         promise.then(function(data){ defer.resolve(data); });
         promise.fail(function(data){ defer.reject(); });
@@ -106,7 +106,7 @@ Hoodie.extend(function(hoodie) {
     
     //Internal get config category (achievements or levels)
     function _getGameData(cat, /*optional*/itemId) {
-        var defer = hoodie.defer();
+        var defer = $.Deferred();
         var promise = hoodie.request('GET', '/hoodie-plugin-game/'+encodeURIComponent('config/game'));
         promise.done(function(data){
             if (typeof itemId != 'undefined') {
